@@ -50,7 +50,7 @@ provider "proxmox" {
 resource "proxmox_vm_qemu" "hobbyfarm" {
 
   name        = var.name
-  target_node = ${var.target_node}
+  target_node = var.target_node
   agent       = 1
   clone       = "ubuntu18-template"
   cores       = 2
