@@ -1,5 +1,10 @@
 variable "public_key" {}
 variable "name" {}
+variable "pm_api_url" {}
+variable "pm_api_token_id" {}
+variable "pm_api_token_secret" {}
+variable "target_node" {}
+
 variable "ip" {
   type = string
 }
