@@ -1,9 +1,17 @@
 variable "public_key" {}
 variable "name" {}
-variable "pm_api_url" {}
-variable "pm_api_token_id" {}
-variable "pm_api_token_secret" {}
-variable "target_node" {}
+variable "pm_api_url" {   
+  type = string
+}
+variable "pm_api_token_id" {  
+  type = string
+}
+variable "pm_api_token_secret" {
+  type = string
+}
+variable "target_node" {  
+  type = string
+}
 
 variable "ip" {
   type = string
@@ -28,7 +36,7 @@ resource "tls_private_key" "temporary" {
   rsa_bits  = 4096
 }
 
-# The following pm_api_url, token_id and secret must be previously entered in the VM template "config map" in the administrator panel or leave it in environments
+## The following pm_api_url, token_id and secret must be previously entered in the VM template "config map" in the administrator panel or leave it in environments
 
 provider "proxmox" {
   pm_debug            = false
