@@ -55,10 +55,10 @@ resource "proxmox_vm_qemu" "hobbyfarm" {
   target_node = var.target_node
   agent       = 1
   clone       = var.image
-  cores       = 2
+  cores       = 8
   sockets     = 1
   cpu         = "host"
-  memory      = 4096
+  memory      = 16384
 
   scsihw      = "virtio-scsi-pci"
 
