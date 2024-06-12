@@ -68,7 +68,7 @@ resource "proxmox_vm_qemu" "hobbyfarm" {
 
   disk {
     size            = "102G"
-    type            = "virtio"
+    type            = "scsi"
     storage         = "local"
   }
 
