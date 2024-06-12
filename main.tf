@@ -52,7 +52,7 @@ resource "proxmox_vm_qemu" "hobbyfarm" {
   name        = var.name
   target_node = var.target_node
   agent       = 1
-  clone       = "ubuntu18-template"
+  clone       = var.image
   cores       = 2
   sockets     = 1
   cpu         = "host"
@@ -65,7 +65,7 @@ resource "proxmox_vm_qemu" "hobbyfarm" {
   }
 
   disk {
-    size            = "10G"
+#    size            = "10G"
     type            = "virtio"
     storage         = "local"
   }
