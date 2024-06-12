@@ -95,23 +95,24 @@ resource "proxmox_vm_qemu" "hobbyfarm" {
     ]
   }
 
-provisioner "remote-exec" {
-  inline = [
-      "sleep 10",
-      #"sudo ip a | grep \"inet \" | grep -v 127.0.0.1 | head -n1 | awk '{print $2}' | cut -d '/'",
-      #"Oraingoz ez dut erabiliko guzti hau",
-      "sleep 10"
-      ]
+# provisioner "remote-exec" {
+#   inline = [
+#       "sleep 10",
+#      #"sudo ip a | grep \"inet \" | grep -v 127.0.0.1 | head -n1 | awk '{print $2}' | cut -d '/'",
+#       #"Oraingoz ez dut erabiliko guzti hau",
+#       "sleep 10"
+#       ]
+# 
+#   connection {
+#     type        = "ssh"
+#     host        = var.ip
+#     user        = "user"
+#     password    = ""
+#     private_key = tls_private_key.temporary.private_key_pem
+#   }
+# 
+#   }
 
-  connection {
-    type        = "ssh"
-    host        = var.ip
-    user        = "user"
-    password    = ""
-    private_key = tls_private_key.temporary.private_key_pem
-  }
-
-  }
 }
 
 
