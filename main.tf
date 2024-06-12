@@ -67,7 +67,7 @@ resource "proxmox_vm_qemu" "hobbyfarm" {
   disk {
     size            = "10G"
     type            = "virtio"
-    storage         = "vz2TB"
+    storage         = "local"
   }
 
   network {
