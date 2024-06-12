@@ -41,7 +41,7 @@ resource "tls_private_key" "temporary" {
 provider "proxmox" {
   pm_debug            = false
   pm_tls_insecure     = true
-  pm_api_url          = "https://172.17.6.248:8006/api2/json"
+  pm_api_url          = "https://172.17.6.247:8006/api2/json"
   pm_api_token_id     = "terraform-prox@pve!new_token_id"
   pm_api_token_secret = var.pm_api_token_secret
 }
