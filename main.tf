@@ -116,11 +116,14 @@ provisioner "remote-exec" {
 
 
 output "private_ip" {
-  value = proxmox_vm_qemu.hobbyfarm.default_ipv4_address
+ # value = proxmox_vm_qemu.hobbyfarm.default_ipv4_address
+  value = var.ip
+
 }
 
 output "public_ip" {
-  value = proxmox_vm_qemu.hobbyfarm.default_ipv4_address
+  # value = proxmox_vm_qemu.hobbyfarm.default_ipv4_address
+  value = var.ip
 }
 
 output "hostname" {
