@@ -129,3 +129,8 @@ output "public_ip" {
 output "hostname" {
   value = proxmox_vm_qemu.hobbyfarm.name
 }
+
+output "protocol" {
+  value = "rdp"
+}
+
