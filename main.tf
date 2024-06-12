@@ -1,5 +1,7 @@
 variable "public_key" {}
 variable "name" {}
+variable "image" {}
+
 variable "pm_api_url" {   
   type = string
 }
